@@ -1,0 +1,8 @@
+*.ppt*
+*.zip
+*.csv
+.Rhistory
+.Rproj.user
+*.Rproj*
+*.twb*
+*.txt

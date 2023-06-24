@@ -10,7 +10,7 @@
 
 
 #### Codes:
-- **`model_codes.ipynb`**: This includes all the codes for this problem where EDA, data pre-processing, feature creation, and model build-validation are present.  
+- **`nyc-taxi-trip-duration-codes.ipynb`**: This includes all the codes for this problem where EDA, data pre-processing, feature creation, and model build-validation are present.  
     - EDA is done to understand the high-level patterns present in the data and do the data processing accordingly.
     - One of the **highlights** is an **engineered feature about traffic** which is estimated using the active number of trips started and ended in each region at a given time period of the day.
 
