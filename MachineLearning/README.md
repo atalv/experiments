@@ -2,7 +2,7 @@
 
 ### NYC Taxi Trip Duration
 
-* **[NYC Taxi Trip Duration][kaggle] prediction** done during Fall'22.  
+* **[NYC Taxi Trip Duration][kaggle] prediction** done during Fall'22 and the data is sourced from Kaggle.  
 
 * `train` and `test` datasets can be downloaded directly from the Kaggle link above. They should be saved in the project repository's root, so that they can be read via Python notebook directly. Those files will not be tracked via git.  
 
