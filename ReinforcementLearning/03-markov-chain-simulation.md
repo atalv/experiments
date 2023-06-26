@@ -53,9 +53,9 @@ $\sum_i(\beta_ir_i)_{t=0} + (\sum_i\beta_i)*r_2 * \beta^{t=1}$.
 
 Similarly, if $\beta_1, \beta_2$ at time $t=1$ moves to state $2$ and
 $\beta_3$ moves to state $1$, then for next time the reward would be
-$( \sum _ {i=1}^2\beta _ i) * r _ 2 + \beta _ 3*r _ 1$; and discounted
-reward (present value) would be
-$\sum _ i(\beta _ i r _ i) _ {t=0} + [(\sum _ {i=1}^2\beta _ i)* r _ 2 + \beta _ 3 * r _ 1] * \beta^{t=1}$.
+$( \sum _ {i=1}^2\beta _ i) * r _ 2 + \beta _ 3 * r _ 1$ ; and
+discounted reward (present value) would be
+$\sum _ i(\beta _ i r _ i) _ {t=0} + [(\sum _ {i=1}^2\beta _ i) * r _ 2 + \beta _ 3 * r _ 1] * \beta^{t=1}$.
 A simple pictorial view of this is described below, the yellow
 highlighted path is the transition that the $\beta_i$ particles followed
 and landed on new state. Black, blue and red paths indicate the
