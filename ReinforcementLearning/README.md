@@ -1,6 +1,6 @@
 ## This folder is for experiments done on Reinforcement Learning using Markov Decision Process (MDP)
 
-The entire learning is done as part of homework assignments provided by **[Dr. Michael Katehakis](http://en.wikipedia.org/wiki/Michael_N._Katehakis)**, distinguished professor and department chair of MSIS department at Rutgers Business School during Spring'23. I am grateful to learn from one of the finest teachers of my academic life!
+The entire learning experiment is done under the supervision of **[Dr. Michael Katehakis](http://en.wikipedia.org/wiki/Michael_N._Katehakis)**, distinguished professor at Rutgers Business School. I am grateful to learn from one of the finest teachers of my academic life!
 
 ### Codes:
 All the codes are written from scratch mostly using `base` R functions and some functions from `ggplot` for visualization. Some selected contents are posted on GitHub.

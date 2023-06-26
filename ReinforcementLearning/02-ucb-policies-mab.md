@@ -1,7 +1,7 @@
 Compare UCB Policies & Simulate Regret
 ================
 Vivek Atal
-2023-04-12
+2023-03-12
 
 - <a href="#regret-with-ucb" id="toc-regret-with-ucb">Regret with UCB</a>
   - <a href="#sequential-sampling-overview"
@@ -570,7 +570,7 @@ ggplot(mapping = aes(x = seq_len(rounds))) +
        )
 ```
 
-![](ucb-policies-mab-01_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](02-ucb-policies-mab_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
 ##### Miscellaneous summaries
 
@@ -631,7 +631,7 @@ ggplot(mapping = aes(x = rep(c(1:6), 4),
        )
 ```
 
-![](ucb-policies-mab-01_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](02-ucb-policies-mab_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 #### Bernoulli population
 
@@ -680,7 +680,7 @@ ggplot(mapping = aes(x = seq_len(rounds))) +
        )
 ```
 
-![](ucb-policies-mab-01_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![](02-ucb-policies-mab_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
 #### Uniform population
 
@@ -752,7 +752,7 @@ ggplot(mapping = aes(x = seq_len(rounds))) +
        )
 ```
 
-![](ucb-policies-mab-01_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](02-ucb-policies-mab_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
 #### Discrete non-parametric population
 
@@ -812,4 +812,4 @@ ggplot(mapping = aes(x = seq_len(rounds))) +
   )
 ```
 
-![](ucb-policies-mab-01_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](02-ucb-policies-mab_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
