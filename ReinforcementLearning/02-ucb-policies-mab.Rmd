@@ -519,6 +519,7 @@ ggplot(mapping = aes(x = rep(c(1:6), 4),
                         rep("Auer et al.", 6),
                         rep("K+R 1995", 6),
                         rep("Greedy", 6))), position = "dodge") +
+  scale_y_log10() +
   labs(x = "Population ID", y = "Avg samples drawn",
        fill = "Policy",
        title = "Number of samples drawn from respective population by policy",
