@@ -32,8 +32,13 @@ $$
 $$
 
 At the end of the simulation, compute the average regret over the
-simulation cycles $\bar{R}_t = \frac{1}{C} \sum_{k=1}^{C} {R^k}_t$ and
-plot $\bar{R}_t$ as a function of $t$.
+simulation cycles:
+
+$$
+\bar{R} _ t = \frac{1}{C} \sum _ {k=1}^{C} {R^k} _ t
+$$
+
+and plot $\bar{R}_t$ as a function of $t$.
 
 ## Robbins 1952
 
@@ -44,11 +49,11 @@ policy is as follows:
 
 1.  Consider 2 sparse sequences of local times:
 
-$1=a_1<a_2<a_3<...$ as $a_k = 2^k = 2,4,8,...$
+$2 = a_1 \lt a_2 \lt a_3 \lt ...$ as $a_k = 2^k = 2,4,8,...$
 
 and
 
-$2=b_1<b_2<b_3<...$ as $b_k = 3^k = 1,3,9,27,...$
+$1 = b_1 \lt b_2 \lt b_3 \lt ...$ as $b_k = 3^k = 1,3,9,27,...$
 
 2.  Estimate the probabilities as:
 
@@ -453,7 +458,7 @@ paste0("#samples drawn from pop1: ", result1_kr$ndraw_pop1, " and from pop2: ",
        result1_kr$ndraw_pop2)
 ```
 
-    ## [1] "#samples drawn from pop1: 13 and from pop2: 987"
+    ## [1] "#samples drawn from pop1: 16 and from pop2: 984"
 
 ## Compare above two policies
 
