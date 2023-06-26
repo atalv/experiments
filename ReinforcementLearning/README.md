@@ -9,6 +9,10 @@ All the codes are written from scratch mostly using `base` R functions and some 
 
 
 ### Notes:
+
 * Learned multiple UCB (Upper Confidence Bound) policies for MAB (Multi Armed Bandit) problems and simulated their performance to compare.
     - The [Katehakis + Robbins (1995)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC41010/pdf/pnas01497-0061.pdf) policy was one of the most simple, versatile and effective policy that can be applied on various scenarios.
 
+* Learned to do simulation of multiple states Markov Chain and calculate average reward, expected present value, estimate steady state probabilities, etc.
+
+* Applied multiple policies to do Q-learning and R-learning where we learn the best policy where true transition probability is unknown and rewards system is known.
