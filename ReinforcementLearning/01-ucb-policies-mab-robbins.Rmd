@@ -28,11 +28,12 @@ $$
 At the end of the simulation, compute the average regret over the simulation cycles:
 
 $$
-\bar{R}_t = \frac{1}{C}\sum_{k=1}^{C}{R^k}_t
+\begin{equation}
+\bar{R}_t = \frac{1}{C} \sum_{k=1}^{C} {R^k}_t
+\end{equation}
 $$
 
 and plot $\bar{R}_t$ as a function of $t$.
-
 
 ## Robbins 1952
 
@@ -40,8 +41,10 @@ First, defining a function to identify which population to choose (which arm to 
 
 1. Consider 2 sparse sequences of local times: 
 
-    * $1=a_1<a_2<a_3<...$ as $a_k = 2^k = 2,4,8,...$.
-    * $2=b_1<b_2<b_3<...$ as $b_k = 3^k = 1,3,9,27,...$.  
+$$
+1=a_1<a_2<a_3<... \text{ as } a_k = 2^k = 2,4,8,... \\
+2=b_1<b_2<b_3<... \text{ as } b_k = 3^k = 1,3,9,27,...
+$$
 
 2. Estimate the probabilities as: 
 
