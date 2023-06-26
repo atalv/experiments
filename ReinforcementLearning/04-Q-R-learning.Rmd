@@ -289,7 +289,6 @@ The idea is to use the true transition probability ($P_{i,j}^a$) to simulate the
 
 $$
 \begin{gather*}
-
 \min{\phi} \\  
 \text{subject to: } 
 \phi + V_X = \max_{a \in A(X)} \left[ r(X,a) + \sum_Y \hat{P}_{X,Y}(a) V_Y \right] 
@@ -298,7 +297,6 @@ $$
 \text{, } \forall a \in A(X) \text{, } \forall{X} \\  
 V_X \text{ can be free variable, BUT we will use constraint } \sum_X V_X = 0 \text{ for unique solution} \\  
 \hat{a}(X) = argmax_a(\hat{\phi} + \hat{V_X}) = func(r, \hat{P}) \text{, whichever action attains equality in constraints for given } X  
-
 \end{gather*}
 $$
 
@@ -329,12 +327,12 @@ To generate the burn-in stage, we first choose any state at random at time $t=0$
 
 **Regret** values are generated following the below approach:
 
-- Derive L-value for the *optimal action* in state $X$ as per *true transition probability* as $ L \left( X, \pi^*, P _ X(\pi^*) \right ) = r(X, a^*) + \sum _ Y P _ {XY}(a^*)V^* _ Y $; where $V^*$ values are extracted after solving the optimality equations using the true transition probability.
+- Derive L-value for the *optimal action* in state $X$ as per *true transition probability* as $L \left( X, \pi^ * , P _ X(\pi^ * ) \right ) = r(X, a^ * ) + \sum _ Y P _ {XY}(a^ * )V^ *  _ Y$; where $V^*$ values are extracted after solving the optimality equations using the true transition probability.
 
 - Similarly, derive the L-value for the *optimal action* in state $X$ as per the *estimated transition probability* generated using the policies as explained above. 
     - Note that, we still **use the same L-values derived** by solving optimality equation with **true transition probability**, but **fetch** the value for the **chosen action as per the policy**. The policy uses the estimated transition probability in the backend to choose the optimal action at time $t$. 
 
-- For the current state and the chosen action per a policy $\pi^0$, define the delta value as $ \Delta(X, \pi^0) = L \left ( X, \pi^*, P _ X(\pi^*) \right ) - L \left ( X, \pi^0, P _ X(\pi^0) \right ) $.
+- For the current state and the chosen action per a policy $\pi^0$, define the delta value as $\Delta(X, \pi^0) = L \left ( X, \pi^*, P _ X(\pi^*) \right ) - L \left ( X, \pi^0, P _ X(\pi^0) \right )$.
 
 - Finally, the `Regret` is to be calculated as cumulative sum of the delta values as we keep moving forward in time. Which is same as multiplying the delta values with the number of times the respective state-action pair was chosen, and sum over all states-actions.
 

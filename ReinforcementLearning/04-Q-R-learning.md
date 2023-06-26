@@ -82,7 +82,7 @@ threshold times (irrespective of whether some action of another state
 not yet explored), then use optimality equation to solve for optimal
 action of that state. This idea is explained in below image:
 
-![Simulation logic](.\04-QLearningSimulationMDPLogic.png)
+![Simulation logic](04-QLearningSimulationMDPLogic.png)
 
 ## Codes
 
@@ -401,14 +401,14 @@ whichever constraint attains equality in below LP formulation:
 
 $$
 \begin{gather*}
-\min{\phi} \\
+\min{\phi} \\  
 \text{subject to: } 
 \phi + V_X = \max_{a \in A(X)} \left[ r(X,a) + \sum_Y \hat{P}_{X,Y}(a) V_Y \right] 
-\text{, }\forall{X} \\
+\text{, }\forall{X} \\  
 \text{similar as: }\phi + V_X \ge \left[ r(X,a) + \sum_Y \hat{P}_{X,Y}(a) V_Y \right] 
-\text{, } \forall a \in A(X) \text{, } \forall{X} \\
-V_X \text{ can be free variable, BUT we will use constraint } \sum_X V_X = 0 \text{ for unique solution}\\
-\hat{a}(X) = argmax_a(\hat{\phi} + \hat{V_X}) = func(r, \hat{P}) \text{, whichever action attains equality in constraints for given } X
+\text{, } \forall a \in A(X) \text{, } \forall{X} \\  
+V_X \text{ can be free variable, BUT we will use constraint } \sum_X V_X = 0 \text{ for unique solution} \\  
+\hat{a}(X) = argmax_a(\hat{\phi} + \hat{V_X}) = func(r, \hat{P}) \text{, whichever action attains equality in constraints for given } X  
 \end{gather*}
 $$
 
@@ -421,24 +421,21 @@ are again detailed below:
   formulation of the problem. So, when in state $X$ at golbal time $t$,
   we get $\hat{\phi^t}$ & $\hat{V_X^t}$ by solving the optimality
   equations $OPT(r(X), \hat{P^t})$ as above.
-
 - **Policy-1**
-
   - Choose the optimal action for state $X$ at global time $t$ as below,
 
-  $$
-    \hat{a}(t,X) = argmax_{a \in A(X)}\left(r(X,a) + \sum_Y \hat{P}^t_{X,Y}(a) \hat{V_Y^t} \right)
-    $$
+$$
+\hat{a}(t,X) = argmax _ {a \in A(X)} \left( r(X,a) + \sum_Y \hat{P}^t _ {X,Y}(a) \hat{V _ Y^t}  \right )
+$$
 
 - **Policy-2**
-
   - Choose the optimal action for state $X$ at global time $t$ as below,
 
-  $$
-    \hat{a}(t,X) = argmax_{a \in A(X)}\left(r(X,a) + \sum_Y \hat{P}^t_{X,Y}(a) \hat{V_Y^t} + \sqrt{\frac{2log(t)}{N^i_a(t)}} \right)
-    $$
+$$
+\hat{a}(t,X) = argmax_{a \in A(X)}\left(r(X,a) + \sum_Y \hat{P}^t_{X,Y}(a) \hat{V_Y^t} + \sqrt{\frac{2log(t)}{N^i_a(t)}} \right)
+$$
 
-  where $T_{X,a}(t) \equiv N^i_a(t)$, these are equivalent notations.
+where $T_{X,a}(t) \equiv N^i_a(t)$, these are equivalent notations.
 
 Using the identified action by the estimates as above, then we generate
 the next state using true transition probability ($P_{i,j}^a$) for the
@@ -465,26 +462,30 @@ threshold times (irrespective of whether some action of another state
 not yet explored), then use optimality equation to solve for optimal
 action of that state. This idea is explained in below image:
 
-![Simulation logic](.\04-QLearningSimulationMDPLogic.png)
+![Simulation logic](04-QLearningSimulationMDPLogic.png)
 
 **Regret** values are generated following the below approach:
 
 - Derive L-value for the *optimal action* in state $X$ as per *true
   transition probability* as
-  $L\left(X, \pi^*, P_X(\pi^*)\right) = r(X, a^*) + \sum_Y P_{XY}(a^*)V^*_Y$;
+  $L \left( X, \pi^ * , P _ X(\pi^ * ) \right ) = r(X, a^ * ) + \sum _ Y P _ {XY}(a^ * )V^ * _ Y$;
   where $V^*$ values are extracted after solving the optimality
   equations using the true transition probability.
+
 - Similarly, derive the L-value for the *optimal action* in state $X$ as
   per the *estimated transition probability* generated using the
   policies as explained above.
+
   - Note that, we still **use the same L-values derived** by solving
     optimality equation with **true transition probability**, but
     **fetch** the value for the **chosen action as per the policy**. The
     policy uses the estimated transition probability in the backend to
     choose the optimal action at time $t$.
+
 - For the current state and the chosen action per a policy $\pi^0$,
   define the delta value as
-  $\Delta(X, \pi^0) = L\left(X, \pi^*, P_X(\pi^*)\right) - L\left(X, \pi^0, P_X(\pi^0)\right)$.
+  $\Delta(X, \pi^0) = L \left ( X, \pi^*, P _ X(\pi^*) \right ) - L \left ( X, \pi^0, P _ X(\pi^0) \right )$.
+
 - Finally, the `Regret` is to be calculated as cumulative sum of the
   delta values as we keep moving forward in time. Which is same as
   multiplying the delta values with the number of times the respective
@@ -498,8 +499,8 @@ Note that,
 
 $$
 \Delta(X, a) = \begin{cases}
-0 & \text{if } a=\pi^*(X)\\
->0 & \text{if } a \ne \pi^*(X)
+0 & \text{if } a=\pi^*(X) \\ 
+\gt 0 & \text{if } a \ne \pi^*(X)
 \end{cases}
 $$
 
