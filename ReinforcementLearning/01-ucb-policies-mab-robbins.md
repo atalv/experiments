@@ -248,7 +248,7 @@ paste0("#samples drawn from pop1: ", result1$ndraw_pop1, " and from pop2: ",
        result1$ndraw_pop2)
 ```
 
-    ## [1] "#samples drawn from pop1: 9 and from pop2: 991"
+    ## [1] "#samples drawn from pop1: 11 and from pop2: 989"
 
 ## Katehakis+Robbins 1995
 
@@ -262,13 +262,13 @@ policy. The policy is as follows:
 2.  Calculate sample estimates:
 
 $$
-\bar{X^i}_{n_i(t)} = \frac{1}{n_i(t)}\sum_{k=1}^{n_i(t)}{X_k}^i \text{ , where } i \in (1,2)
+\bar{X^i} _ {n _ i(t)} = \frac{1}{n _ i(t)}\sum _ {k=1}^{n _ i(t)}{X _ k}^i \text{ , where } i \in (1,2)
 $$
 
 and the UCB index as:
 
 $$
-UCB_i(t, \bar{X^i}_{n_i(t)}) = \bar{X^i}_{n_i(t)} + \sigma_i \sqrt{\frac{2*log(t)}{n_i(t)}}
+UCB _ i(t, \bar{X^i} _ {n _ i(t)}) = \bar{X^i} _ {n _ i(t)} + \sigma _ i \sqrt{\frac{2*log(t)}{n _ i(t)}}
 $$
 
 3.  At time $t$, define which bandit to choose:
@@ -277,9 +277,9 @@ $$
 \begin{equation}
 \Pi(t) = 
 \begin{cases}
-1 & \text{if } t \in \{1\} \\
-2 & \text{if } t \in \{2\} \\
-\mathrm{argmax}_i\left(UCB_i(t, \bar{X^i}_{n_i(t)})\right) & \text{otherwise}
+1 & \text{if } t \in \{1\} \\  
+2 & \text{if } t \in \{2\} \\  
+\mathrm{argmax} _ i \left ( UCB _ i(t, \bar{X^i} _ {n _ i(t)}) \right ) & \text{otherwise}
 \end{cases}
 \end{equation}
 $$
