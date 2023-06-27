@@ -288,16 +288,16 @@ which we just observe.
 The idea is to use the true transition probability ($P_{i,j}^a$) to simulate the next state from a given state. However, the action at a given state is chosen by the algorithm which explores the state-action for each pair in the initial burn-in stage. And then the algorithm estimates the transition probability based on the counter of each state-action pair and how many times it transitioned to which state. This estimated transition probability ($\hat{P_{i,j}}^a$) is passed on to the optimality equation to find the average reward and the respective optimal action (the `argmax`) of each state. Optimality equation can be solved using linear programming to compute the optimal action at time $t$, which is estimated as $\hat{A_t}=\hat{a}$: for the given state, whichever constraint attains equality in below LP formulation:
 
 $$
-\begin{gather*}
-\min{\phi} \\  
+\begin{gather * }
+\min{\phi}  \\\  
 \text{subject to: } 
-\phi + V_X = \max_{a \in A(X)} \left[ r(X,a) + \sum_Y \hat{P}_{X,Y}(a) V_Y \right] 
-\text{, }\forall{X} \\  
+\phi + V _ X = \max _ {a \in A(X)} \left[ r(X,a) + \sum_Y \hat{P}_{X,Y}(a) V_Y \right] 
+\text{, }\forall{X} \\\  
 \text{similar as: }\phi + V_X \ge \left[ r(X,a) + \sum_Y \hat{P}_{X,Y}(a) V_Y \right] 
-\text{, } \forall a \in A(X) \text{, } \forall{X} \\  
-V_X \text{ can be free variable, BUT we will use constraint } \sum_X V_X = 0 \text{ for unique solution} \\  
+\text{, } \forall a \in A(X) \text{, } \forall{X} \\\  
+V_X \text{ can be free variable, BUT we will use constraint } \sum_X V_X = 0 \text{ for unique solution} \\\  
 \hat{a}(X) = argmax_a(\hat{\phi} + \hat{V_X}) = func(r, \hat{P}) \text{, whichever action attains equality in constraints for given } X  
-\end{gather*}
+\end{gather * }
 $$
 
 **Two ways to find optimal actions** to be employed instead of just the above approach; one approach is same as above, and the other approach is to include another component while doing $argmax$. Both the approaches are again detailed below:
@@ -332,7 +332,7 @@ To generate the burn-in stage, we first choose any state at random at time $t=0$
 - Similarly, derive the L-value for the *optimal action* in state $X$ as per the *estimated transition probability* generated using the policies as explained above. 
     - Note that, we still **use the same L-values derived** by solving optimality equation with **true transition probability**, but **fetch** the value for the **chosen action as per the policy**. The policy uses the estimated transition probability in the backend to choose the optimal action at time $t$. 
 
-- For the current state and the chosen action per a policy $\pi^0$, define the delta value as $\Delta(X, \pi^0) = L \left ( X, \pi^*, P _ X(\pi^*) \right ) - L \left ( X, \pi^0, P _ X(\pi^0) \right )$.
+- For the current state and the chosen action per a policy $\pi^0$, define the delta value as $\Delta(X, \pi^0) = L \left ( X, \pi^ * , P _ X(\pi^ * ) \right ) - L \left ( X, \pi^0, P _ X(\pi^0) \right )$ .
 
 - Finally, the `Regret` is to be calculated as cumulative sum of the delta values as we keep moving forward in time. Which is same as multiplying the delta values with the number of times the respective state-action pair was chosen, and sum over all states-actions.
 
@@ -344,8 +344,8 @@ Note that,
 
 $$
 \Delta(X, a) = \begin{cases}
-0 & \text{if } a=\pi^*(X) \\ 
-\gt 0 & \text{if } a \ne \pi^*(X)
+0 & \text{if } a = \pi^ * (X) \\  
+\gt 0 & \text{if } a \ne \pi^ * (X)
 \end{cases}
 $$
 

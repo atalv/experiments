@@ -400,16 +400,16 @@ $t$, which is estimated as $\hat{A_t}=\hat{a}$: for the given state,
 whichever constraint attains equality in below LP formulation:
 
 $$
-\begin{gather*}
-\min{\phi} \\  
+\begin{gather * }
+\min{\phi}  \\\  
 \text{subject to: } 
-\phi + V_X = \max_{a \in A(X)} \left[ r(X,a) + \sum_Y \hat{P}_{X,Y}(a) V_Y \right] 
-\text{, }\forall{X} \\  
+\phi + V _ X = \max _ {a \in A(X)} \left[ r(X,a) + \sum_Y \hat{P}_{X,Y}(a) V_Y \right] 
+\text{, }\forall{X} \\\  
 \text{similar as: }\phi + V_X \ge \left[ r(X,a) + \sum_Y \hat{P}_{X,Y}(a) V_Y \right] 
-\text{, } \forall a \in A(X) \text{, } \forall{X} \\  
-V_X \text{ can be free variable, BUT we will use constraint } \sum_X V_X = 0 \text{ for unique solution} \\  
+\text{, } \forall a \in A(X) \text{, } \forall{X} \\\  
+V_X \text{ can be free variable, BUT we will use constraint } \sum_X V_X = 0 \text{ for unique solution} \\\  
 \hat{a}(X) = argmax_a(\hat{\phi} + \hat{V_X}) = func(r, \hat{P}) \text{, whichever action attains equality in constraints for given } X  
-\end{gather*}
+\end{gather * }
 $$
 
 **Two ways to find optimal actions** to be employed instead of just the
@@ -484,7 +484,8 @@ action of that state. This idea is explained in below image:
 
 - For the current state and the chosen action per a policy $\pi^0$,
   define the delta value as
-  $\Delta(X, \pi^0) = L \left ( X, \pi^*, P _ X(\pi^*) \right ) - L \left ( X, \pi^0, P _ X(\pi^0) \right )$.
+  $\Delta(X, \pi^0) = L \left ( X, \pi^ * , P _ X(\pi^ * ) \right ) - L \left ( X, \pi^0, P _ X(\pi^0) \right )$
+  .
 
 - Finally, the `Regret` is to be calculated as cumulative sum of the
   delta values as we keep moving forward in time. Which is same as
@@ -499,8 +500,8 @@ Note that,
 
 $$
 \Delta(X, a) = \begin{cases}
-0 & \text{if } a=\pi^*(X) \\ 
-\gt 0 & \text{if } a \ne \pi^*(X)
+0 & \text{if } a = \pi^ * (X) \\  
+\gt 0 & \text{if } a \ne \pi^ * (X)
 \end{cases}
 $$
 
