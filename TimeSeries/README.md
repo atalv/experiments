@@ -8,7 +8,7 @@
 
 * [Kaggle implementation done by me](https://www.kaggle.com/code/vivekatal/store-sales-forecasting-r-markdown).
 
-* Check the **`grocery-store-sales-arima.md`** to see the final output of the R Markdown script (`.Rmd`) nicely rendered on GitHub.
+* **Check the `grocery-store-sales-arima.md`** to see the final output of the R Markdown script (`.Rmd`) **nicely rendered on GitHub**.
 
 #### Codes:
 - *`grocery-store-sales-arima.Rmd`*: This includes all the R codes for this problem where EDA, data pre-processing, feature creation, and model build are present.
