@@ -400,7 +400,6 @@ $t$, which is estimated as $\hat{A_t}=\hat{a}$: for the given state,
 whichever constraint attains equality in below LP formulation:
 
 $$
-\begin{gather*}
 \min{\phi}  \\\  
 \text{subject to: } 
 \phi + V _ X = \max _ {a \in A(X)} \left[ r(X,a) + \sum_Y \hat{P}_{X,Y}(a) V_Y \right] 
@@ -409,7 +408,6 @@ $$
 \text{, } \forall a \in A(X) \text{, } \forall{X} \\\  
 V_X \text{ can be free variable, BUT we will use constraint } \sum_X V_X = 0 \text{ for unique solution} \\\  
 \hat{a}(X) = argmax_a(\hat{\phi} + \hat{V_X}) = func(r, \hat{P}) \text{, whichever action attains equality in constraints for given } X  
-\end{gather*}
 $$
 
 **Two ways to find optimal actions** to be employed instead of just the

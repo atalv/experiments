@@ -288,7 +288,6 @@ which we just observe.
 The idea is to use the true transition probability ($P_{i,j}^a$) to simulate the next state from a given state. However, the action at a given state is chosen by the algorithm which explores the state-action for each pair in the initial burn-in stage. And then the algorithm estimates the transition probability based on the counter of each state-action pair and how many times it transitioned to which state. This estimated transition probability ($\hat{P_{i,j}}^a$) is passed on to the optimality equation to find the average reward and the respective optimal action (the `argmax`) of each state. Optimality equation can be solved using linear programming to compute the optimal action at time $t$, which is estimated as $\hat{A_t}=\hat{a}$: for the given state, whichever constraint attains equality in below LP formulation:
 
 $$
-\begin{gather*}
 \min{\phi}  \\\  
 \text{subject to: } 
 \phi + V _ X = \max _ {a \in A(X)} \left[ r(X,a) + \sum_Y \hat{P}_{X,Y}(a) V_Y \right] 
@@ -297,7 +296,6 @@ $$
 \text{, } \forall a \in A(X) \text{, } \forall{X} \\\  
 V_X \text{ can be free variable, BUT we will use constraint } \sum_X V_X = 0 \text{ for unique solution} \\\  
 \hat{a}(X) = argmax_a(\hat{\phi} + \hat{V_X}) = func(r, \hat{P}) \text{, whichever action attains equality in constraints for given } X  
-\end{gather*}
 $$
 
 **Two ways to find optimal actions** to be employed instead of just the above approach; one approach is same as above, and the other approach is to include another component while doing $argmax$. Both the approaches are again detailed below:
