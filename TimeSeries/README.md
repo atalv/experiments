@@ -13,11 +13,9 @@
 #### Codes:
 - *`grocery-store-sales-arima.Rmd`*: This includes all the R codes for this problem where EDA, data pre-processing, feature creation, and model build are present.
 - *`grocery-store-sales-deep-aws.ipynb`*: This includes an experimental implementation of the same problem using [DeepAR](https://arxiv.org/pdf/1704.04110.pdf). Hyperparameter tuning is not done; that should have been done using time series cross-validation.  
-    - EDA is done to understand the high-level patterns present in the data and do the data processing accordingly.
-    - One of the **highlights** is an **engineered feature about traffic** which is estimated using the active number of trips started and ended in each region at a given time period of the day.
 
 #### Notes:
-1. Initial idea is to create some descriptives of the data, e.g., how many stores are there, how many products are there, distribution of sales by store, distribution of sales by product, etc.
+1. Initial idea is to create some descriptive of the data, e.g., how many stores are there, how many products are there, distribution of sales by store, distribution of sales by product, etc.
 2. Create some high level time series plots for selected products' sales, note the irregularities observed in the data - impact of earthquake, promotion, etc.
 3. Analyze one of the most sold product-store combination and tune SARIMA model manually using the time series plots, model diagnostics and time-series specific cross-validation.
 4. Some of the **highlights** are:
