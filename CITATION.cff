@@ -1,0 +1,15 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Experiments by Vivek
+message: >-
+  If you utilize this work, please cite it using the
+  metadata from this file
+type: software
+authors:
+  - given-names: Vivek
+    family-names: Atal
+    email: atalvivek@yahoo.co.in
+    orcid: 'https://orcid.org/0000-0002-9948-7458'
+license: GPL-3.0
