@@ -12,11 +12,11 @@ If you use any of this work then please add a referrence to this repository ['Ex
 ## Some highlighs
 
 - **GraphNetwork**: 
-    - Predict whether a user of LastFM would follow another user and serve as a recommendation.
+    - Predicted whether a user of LastFM would follow another user and serve as a recommendation.
     - Implemented multiple node embedding approaches for link prediction - *[Graph Factorization](https://static.googleusercontent.com/media/research.google.com/en/pubs/archive/40839.pdf), [DeepWalk](https://arxiv.org/pdf/1403.6652.pdf), [Node2Vec](https://arxiv.org/pdf/1607.00653.pdf), [Adamic-Adar index](http://www.cs.cornell.edu/home/kleinber/link-pred.pdf)* - and compared their performance for link prediction task.
 
 - **MachineLearning**: 
-    - Predict NYC taxi trip duration.
+    - Predicted NYC taxi trip duration.
     - Implemented typical machine learning models from *[scikit-learn](https://scikit-learn.org/stable/)* ([GammaRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.GammaRegressor.html), [RandomForestRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html), [HistGradientBoostingRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.HistGradientBoostingRegressor.html)) with intelligently derived features, viz., traffic information in an area at a given time window based on average active number of trips originating or ending.
 
 - **ReinforcementLearning**: 
