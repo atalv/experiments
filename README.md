@@ -24,4 +24,4 @@ This repo is to store the experiments done for hands-on learning with *dummy dat
     - Forecasted 2 weeks ahead grocery store sales of 33 product groups across 54 stores, approx. 1.8K time series.
     - Engineered multiple sensible features, viz., cross-store, cross-product elements, algorithmically short-listed important events for a given store-product, etc.
     - Some Seasonal ARIMA models were built manually, and then scaled it using ARIMA where seasonal components were extracted beforehand for faster execution.
-    - Experimented with DeepAR on AWS Sagemaker to build a single global model instead of 1.8K ARIMA models.
+    - Experimented with [DeepAR on AWS Sagemaker](https://docs.aws.amazon.com/sagemaker/latest/dg/deepar.html) to build a single global model instead of 1.8K ARIMA models.
