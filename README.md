@@ -5,6 +5,10 @@ This repo is to store the experiments done for hands-on learning with *dummy dat
 - Each sub-directory in the root is named as the main topic of the experiment.
 - All the contents are created solely by me with guidance from official resources and academic experts.
 
+## Citation
+
+If you use any of this work then please add a referrence to this repository ['Experiments by Vivek Atal'](https://github.com/atalv/experiments/) as a fair usage policy.
+
 ## Some highlighs
 
 - **GraphNetwork**: 
