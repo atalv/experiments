@@ -1,1 +1,2 @@
 *.Rmd linguist-detectable
+*Verbose.ipynb -linguist-detectable
