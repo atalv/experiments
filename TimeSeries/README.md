@@ -12,7 +12,7 @@
 
 #### Codes:
 - *`grocery-store-sales-ARIMA.Rmd`*: This includes all the R codes for this problem where EDA, data pre-processing, feature creation, and model build are present.
-- *`grocery-store-sales-DeepAR-aws.ipynb`*: This includes an experimental implementation of the same problem using [DeepAR](https://arxiv.org/pdf/1704.04110.pdf) on AWS Sagemaker. Hyperparameter tuning is not done; that should have been done using time series cross-validation.  
+- *`grocery-store-sales-DeepAR-aws-Verbose.ipynb`*: This includes an experimental implementation of the same problem using [DeepAR](https://arxiv.org/pdf/1704.04110.pdf) on AWS Sagemaker. Hyperparameter tuning is not done; that should have been done using time series cross-validation.  
     - **`grocery-store-sales-DeepAR-aws-TrimmedOutput.ipynb`**: This is the light weight version of above notebook so that it can be rendered easily on GitHub. Some verbose outputs are truncated, no other changes.
 
 #### Notes:
