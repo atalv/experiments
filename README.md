@@ -20,7 +20,7 @@ If you use any of this work then please add a referrence to this repository ['Ex
     - Implemented typical machine learning models from *[scikit-learn](https://scikit-learn.org/stable/)* ([GammaRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.GammaRegressor.html), [RandomForestRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html), [HistGradientBoostingRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.HistGradientBoostingRegressor.html)) with intelligently derived features, viz., traffic information in an area at a given time window based on average active number of trips originating or ending.
 
 - **ReinforcementLearning**: 
-    - Simulated multiple UCB (Upper Confidence Bound) policies for MAB (Multi Armed Bandit) problems and compared their performance.
+    - Simulated multiple UCB (Upper Confidence Bound) policies for MAB ([Multi Armed Bandit](https://en.wikipedia.org/wiki/Multi-armed_bandit)) problems and MDP ([Markov Decision Process](https://en.wikipedia.org/wiki/Markov_decision_process)) and compared their performance.
     - Learned to do simulation of multiple states Markov Chain and calculate average reward, expected present value, estimate steady state probabilities, etc.
     - Most of the research papers referred for simulation exercises are authored by [Dr. Michael Katehakis](http://en.wikipedia.org/wiki/Michael_N._Katehakis).
 
