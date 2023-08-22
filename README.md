@@ -14,6 +14,7 @@ If you use any of this work then please add a referrence to this repository ['Ex
 - **GraphNetwork**: 
     - Predicted whether a user of LastFM would follow another user and serve as a recommendation.
     - Implemented multiple node embedding approaches for link prediction - *[Graph Factorization](https://static.googleusercontent.com/media/research.google.com/en/pubs/archive/40839.pdf), [DeepWalk](https://arxiv.org/pdf/1403.6652.pdf), [Node2Vec](https://arxiv.org/pdf/1607.00653.pdf), [Adamic-Adar index](http://www.cs.cornell.edu/home/kleinber/link-pred.pdf)* - and compared their performance for link prediction task.
+    - Referred to excellent materials by Stanford CS224 course on [Machine Learning with Graphs](http://web.stanford.edu/class/cs224w/).
 
 - **MachineLearning**: 
     - Predicted NYC taxi trip duration.
